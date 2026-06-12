@@ -57,18 +57,20 @@ python veltui/veltui.py
 ## Usage
 
 ```bash
-python veltui/veltui.py
+veltui
 ```
 
 With options:
 
 ```bash
-python veltui/veltui.py --help
-python veltui/veltui.py -m claude          # start with Claude Haiku 4.5
-python veltui/veltui.py -m 5               # start with model #5 (Llama 4 Scout)
-python veltui/veltui.py --list-models      # print models and exit
-python veltui/veltui.py --clear-history    # delete all saved conversations
+veltui --help
+veltui -m claude          # start with Claude Haiku 4.5
+veltui -m 5               # start with model #5 (Llama 4 Scout)
+veltui --list-models      # print models and exit
+veltui --clear-history    # delete all saved conversations
 ```
+
+Running from a source checkout instead? `python veltui/veltui.py` takes the same options.
 
 ## In-app commands
 
