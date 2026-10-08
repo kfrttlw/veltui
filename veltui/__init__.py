@@ -1,3 +1,3 @@
-"""veltui — privacy-first AI chat in your terminal, powered by DuckDuckGo."""
+"""veltui — duck.ai in your terminal."""
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

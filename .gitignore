@@ -13,11 +13,30 @@ venv/
 .ruff_cache/
 .mypy_cache/
 .pytest_cache/
+.coverage
+htmlcov/
 
 # Editor / OS
 .vscode/
 .idea/
+*.swp
+*~
 .DS_Store
+Thumbs.db
 
-# veltui local data (saved chats + prefs live in ~/.veltui, but just in case)
+# Your own stuff that must never end up in a commit:
+# saved chats and settings (they live in ~/.local/share/veltui — this is just in case)
+*.db
+*.db-journal
 *.sqlite
+*.sqlite-journal
+# chats written by /export (default name, in the folder you started veltui from)
+veltui-*.md
+# `veltui doctor --out …` reports: page screenshot and dumps
+doctor-*/
+# logs, secrets, local AI-assistant settings
+*.log
+.env
+.env.*
+.claude/settings.local.json
+CLAUDE.local.md

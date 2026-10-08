@@ -1,3 +1,3 @@
-from veltui.veltui import main
+from veltui.cli import main
 
 main()

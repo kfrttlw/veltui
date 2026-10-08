@@ -4,30 +4,35 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "veltui"
-version = "0.1.0"
-description = "Privacy-first AI chat in your terminal, powered by DuckDuckGo"
+version = "0.2.0"
+description = "duck.ai in your terminal — private AI chat, no account, no API key"
 readme = "README.md"
 requires-python = ">=3.10"
+license = { text = "MIT" }
 authors = [{ name = "kfrt" }]
 dependencies = [
-    "rich",
-    "textual",
-    "playwright",
+    "textual>=8,<9",
+    "rich>=13.7",
+    "playwright>=1.45",
 ]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff"]
 
 [project.urls]
 Homepage = "https://github.com/kfrttlw/veltui"
 
 [project.scripts]
-veltui = "veltui.veltui:main"
+veltui = "veltui.cli:main"
 
 [tool.setuptools]
 packages = ["veltui"]
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
 [tool.ruff]
-# PEP 8 allows raising the line limit to 99 for teams that agree on it. veltui
-# keeps its aligned tables (models, themes, headers) readable at 99 instead of
-# wrapping everything to 79.
 line-length = 99
 
 [tool.ruff.lint]
